@@ -18,10 +18,10 @@ import Utils
         self.apply = apply
         super.init()
     }
-    public convenience init(map:[String:String]) {
+    public convenience init(map:[String:AnyObject]) {
         self.init {target in
             _ = map.map { (key,val) in
-                target.setValue(val, forKey:key)
+                target.setValue(val, forKeyPath:key)
             }
         }
     }
