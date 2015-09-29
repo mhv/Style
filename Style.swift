@@ -9,7 +9,7 @@
 import UIKit
 import Utils
 
-public class Style : NSObject {
+@objc(AStyle) public class Style : NSObject {
     override public class func memoKey()-> String {
         return "Style"
     }
