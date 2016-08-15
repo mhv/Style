@@ -30,7 +30,7 @@ import Utils
 extension UIResponder {
     public var styleName:String? {
         set {
-            let styles = newValue?.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let styles = newValue?.components(separatedBy: NSCharacterSet.whitespaces)
             _ = styles?.map {
                 Style.memo($0)?.apply(self)
             }
